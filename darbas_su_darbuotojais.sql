@@ -9,8 +9,8 @@ create table if not exist 'uzduotys' (
 	pavadinimas text,
 	pastaba text,
 	iki_data int
-)
+);
 
-insert or ignore into uzduotys (pavadinimas, pastaba, iki_data) values ('Programuoti', 'Programuoti Python kalba', 1644522987), ('Gerti kava', 'Išgerti šiek tiek kavos', 1644526587), ('Toliau programuoti', 'Toliau tęsti darbą', 1644530187)
+insert or ignore into uzduotys (pavadinimas, pastaba, iki_data) values ('Programuoti', 'Programuoti Python kalba', 1644522987), ('Gerti kava', 'Išgerti šiek tiek kavos', 1644526587), ('Toliau programuoti', 'Toliau tęsti darbą', 1644530187);
 
-SELECT pavadinimas, pastaba, datetime(iki_data, 'unixepoch', 'localtime') as padaryti_iki FROM uzduotys
+SELECT pavadinimas, pastaba, datetime(iki_data, 'unixepoch', 'localtime') as padaryti_iki FROM uzduotys;
